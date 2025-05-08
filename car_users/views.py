@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect
-from .forms import UserRegisterForm,UserCreationForm
+from .forms import UserRegisterForm
 from django.contrib import messages
 
 def register(request):
@@ -7,8 +7,11 @@ def register(request):
         form = UserRegisterForm(request.POST)
         if form.is_valid():
             form.save()
+            username = form.cleaned_data.get('username')
             messages.success(request, f'Your account has been created. You are now able to Log In')
             return redirect('car_rental-home')
+        else:
+            messages.error(request,f'Something went wrong!')
     else:
         form = UserRegisterForm()
     return render(request,'car_users/register.html',{'form':form})
