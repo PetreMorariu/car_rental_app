@@ -10,8 +10,6 @@ def register(request):
             username = form.cleaned_data.get('username')
             messages.success(request, f'Your account has been created. You are now able to Log In')
             return redirect('car_rental-home')
-        else:
-            messages.error(request,f'Something went wrong!')
     else:
         form = UserRegisterForm()
     return render(request,'car_users/register.html',{'form':form})
