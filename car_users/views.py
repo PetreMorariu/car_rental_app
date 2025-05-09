@@ -1,3 +1,4 @@
+from django.contrib.auth import login
 from django.shortcuts import render, redirect
 from .forms import UserRegisterForm
 from django.contrib import messages
@@ -15,9 +16,9 @@ def register(request):
         form = UserRegisterForm()
     return render(request,'car_users/register.html',{'form':form})
 
-def login(request):
+def login_user(request):
         if request.method == "POST":
-            form = AuthenticationForm(request.POST)
+            form = AuthenticationForm(data=request.POST)
             if form.is_valid():
                 user = form.get_user()
                 login(request, user)
