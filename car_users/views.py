@@ -1,6 +1,7 @@
 from django.shortcuts import render, redirect
 from .forms import UserRegisterForm
 from django.contrib import messages
+from django.contrib.auth.forms import AuthenticationForm
 
 def register(request):
     if request.method == "POST":
@@ -13,3 +14,20 @@ def register(request):
     else:
         form = UserRegisterForm()
     return render(request,'car_users/register.html',{'form':form})
+
+def login(request):
+        if request.method == "POST":
+            form = AuthenticationForm(request.POST)
+            if form.is_valid():
+                user = form.get_user()
+                login(request, user)
+                return redirect('car_rental-home')
+            else:
+                messages.error(request,
+                               f'Please enter a correct username and password. Note that both fields may be case-sensitive.')
+                return redirect('login')
+        else:
+            form = AuthenticationForm()
+            return render(request, 'car_users/login.html', {'form': form})
+
+
