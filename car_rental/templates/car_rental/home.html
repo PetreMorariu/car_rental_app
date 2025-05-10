@@ -1,13 +1,8 @@
 {% extends "car_rental/base.html" %}
-
-    {% block content %}
-        <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <title>Title</title>
-        </head>
-        <body>
-            <p>My first Text</p>
-        </body>
-        </html>
-    {% endblock %}
+{% block content %}
+     {% for car in cars%}
+        <article>
+            {{car}}
+        </article>
+     {% endfor%}
+{% endblock %}

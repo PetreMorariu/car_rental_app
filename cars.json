@@ -1,0 +1,282 @@
+[
+  {
+    "make": "Toyota",
+    "model": "Camry",
+    "year": 2018,
+    "location": "New York",
+    "price": 18000,
+    "created_by": 1
+  },
+  {
+    "make": "Honda",
+    "model": "Accord",
+    "year": 2019,
+    "location": "Los Angeles",
+    "price": 20000,
+    "created_by": 2
+  },
+  {
+    "make": "Ford",
+    "model": "Mustang",
+    "year": 2020,
+    "location": "Chicago",
+    "price": 25000,
+    "created_by": 1
+  },
+  {
+    "make": "BMW",
+    "model": "3 Series",
+    "year": 2017,
+    "location": "Miami",
+    "price": 27000,
+    "created_by": 2
+  },
+  {
+    "make": "Audi",
+    "model": "A4",
+    "year": 2016,
+    "location": "Seattle",
+    "price": 23000,
+    "created_by": 1
+  },
+  {
+    "make": "Mercedes-Benz",
+    "model": "C300",
+    "year": 2018,
+    "location": "Boston",
+    "price": 29000,
+    "created_by": 2
+  },
+  {
+    "make": "Tesla",
+    "model": "Model 3",
+    "year": 2021,
+    "location": "San Francisco",
+    "price": 35000,
+    "created_by": 1
+  },
+  {
+    "make": "Nissan",
+    "model": "Altima",
+    "year": 2015,
+    "location": "Houston",
+    "price": 15000,
+    "created_by": 2
+  },
+  {
+    "make": "Hyundai",
+    "model": "Elantra",
+    "year": 2019,
+    "location": "Denver",
+    "price": 17000,
+    "created_by": 1
+  },
+  {
+    "make": "Kia",
+    "model": "Sorento",
+    "year": 2020,
+    "location": "Atlanta",
+    "price": 22000,
+    "created_by": 2
+  },
+  {
+    "make": "Volkswagen",
+    "model": "Golf",
+    "year": 2018,
+    "location": "Portland",
+    "price": 16000,
+    "created_by": 1
+  },
+  {
+    "make": "Subaru",
+    "model": "Outback",
+    "year": 2017,
+    "location": "Salt Lake City",
+    "price": 21000,
+    "created_by": 2
+  },
+  {
+    "make": "Mazda",
+    "model": "Mazda3",
+    "year": 2016,
+    "location": "Orlando",
+    "price": 14000,
+    "created_by": 1
+  },
+  {
+    "make": "Jaguar",
+    "model": "XE",
+    "year": 2015,
+    "location": "Detroit",
+    "price": 33000,
+    "created_by": 2
+  },
+  {
+    "make": "Lexus",
+    "model": "RX",
+    "year": 2019,
+    "location": "Las Vegas",
+    "price": 38000,
+    "created_by": 1
+  },
+  {
+    "make": "Acura",
+    "model": "TLX",
+    "year": 2018,
+    "location": "Philadelphia",
+    "price": 25000,
+    "created_by": 2
+  },
+  {
+    "make": "Infiniti",
+    "model": "Q50",
+    "year": 2017,
+    "location": "Charlotte",
+    "price": 27000,
+    "created_by": 1
+  },
+  {
+    "make": "Mini",
+    "model": "Cooper",
+    "year": 2016,
+    "location": "San Diego",
+    "price": 15000,
+    "created_by": 2
+  },
+  {
+    "make": "Cadillac",
+    "model": "XT4",
+    "year": 2020,
+    "location": "Dallas",
+    "price": 38000,
+    "created_by": 1
+  },
+  {
+    "make": "Jeep",
+    "model": "Wrangler",
+    "year": 2019,
+    "location": "Phoenix",
+    "price": 28000,
+    "created_by": 2
+  },
+  {
+    "make": "Land Rover",
+    "model": "Discovery",
+    "year": 2018,
+    "location": "Atlanta",
+    "price": 46000,
+    "created_by": 1
+  },
+  {
+    "make": "Alfa Romeo",
+    "model": "Giulia",
+    "year": 2020,
+    "location": "Minneapolis",
+    "price": 40000,
+    "created_by": 2
+  },
+  {
+    "make": "Tesla",
+    "model": "Model S",
+    "year": 2022,
+    "location": "San Francisco",
+    "price": 80000,
+    "created_by": 1
+  },
+  {
+    "make": "Porsche",
+    "model": "911",
+    "year": 2021,
+    "location": "Los Angeles",
+    "price": 90000,
+    "created_by": 2
+  },
+  {
+    "make": "Ferrari",
+    "model": "488",
+    "year": 2019,
+    "location": "Miami",
+    "price": 250000,
+    "created_by": 1
+  },
+  {
+    "make": "Lamborghini",
+    "model": "Huracan",
+    "year": 2020,
+    "location": "New York",
+    "price": 260000,
+    "created_by": 2
+  },
+  {
+    "make": "Maserati",
+    "model": "Ghibli",
+    "year": 2018,
+    "location": "Chicago",
+    "price": 75000,
+    "created_by": 1
+  },
+  {
+    "make": "Rolls-Royce",
+    "model": "Phantom",
+    "year": 2019,
+    "location": "Houston",
+    "price": 450000,
+    "created_by": 2
+  },
+  {
+    "make": "Bentley",
+    "model": "Continental",
+    "year": 2020,
+    "location": "Dallas",
+    "price": 200000,
+    "created_by": 1
+  },
+  {
+    "make": "Aston Martin",
+    "model": "Vantage",
+    "year": 2017,
+    "location": "Seattle",
+    "price": 150000,
+    "created_by": 2
+  },
+  {
+    "make": "McLaren",
+    "model": "720S",
+    "year": 2021,
+    "location": "Las Vegas",
+    "price": 300000,
+    "created_by": 1
+  },
+  {
+    "make": "Bugatti",
+    "model": "Chiron",
+    "year": 2022,
+    "location": "Miami",
+    "price": 3000000,
+    "created_by": 2
+  },
+  {
+    "make": "Pagani",
+    "model": "Huayra",
+    "year": 2021,
+    "location": "Los Angeles",
+    "price": 2500000,
+    "created_by": 1
+  },
+  {
+    "make": "Koenigsegg",
+    "model": "Jesko",
+    "year": 2023,
+    "location": "New York",
+    "price": 3000000,
+    "created_by": 2
+  },
+  {
+    "make": "Tesla",
+    "model": "Model X",
+    "year": 2023,
+    "location": "San Francisco",
+    "price": 90000,
+    "created_by": 1
+  }
+]
