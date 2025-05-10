@@ -1,8 +1,57 @@
 {% extends "car_rental/base.html" %}
 {% block content %}
-     {% for car in cars%}
-        <article>
-            {{car}}
-        </article>
-     {% endfor%}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Car Listings</title>
+    <style>
+        /* Container that holds all cars, with flex layout */
+        .cars-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* space between cars */
+            justify-content: center; /* optional: centers the row */
+        }
+        /* Each car block takes roughly half the width minus gaps */
+        .car {
+            flex: 1 1 calc(50% - 20px);
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        /* Optional: make cars look consistent on smaller screens */
+        @media(max-width: 768px) {
+            .car {
+                flex: 1 1 100%;
+            }
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+        .attributes {
+            list-style: none;
+            padding: 0;
+        }
+        .attributes li {
+            padding: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <h1>Car Listings</h1>
+    <div class="cars-container">
+        {% for car in cars %}
+            <div class="car">
+                <h2>{{ car.make }} {{ car.model }} ({{ car.year }})</h2>
+                <ul class="attributes">
+                    <li><strong>Location:</strong> {{ car.location }}</li>
+                </ul>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
 {% endblock %}
