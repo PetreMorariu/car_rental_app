@@ -34,6 +34,15 @@ def edit_car(request, car_id: int):
         form = CarForm(instance=car)
     return render(request,'car_rental/edit_car.html', {'form':form, 'car':car})
 
+def delete_car(request, car_id):
+    car = get_object_or_404(Car, id=car_id)
+    if request.method == 'POST':
+        car.delete()
+        messages.warning(request, f'The car was deleted!')
+        return redirect("car_rental-home")
+    return render(request, 'car_rental/confirm_delete.html', {'car': car})
+
+
 
 
 
