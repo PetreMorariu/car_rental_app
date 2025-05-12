@@ -12,11 +12,11 @@ def add_car(request):
         form = CarForm(request.POST)
         if form.is_valid():
             form.save()
-            messages.success(request, f'Your recipe has been created!')
+            messages.success(request, f'The car was added to the Fleet!')
             return redirect('car_rental-home')
         else:
-            messages.error(f'Correct the issues!')
-            return redirect(request,'car_rental/add_car.html',{'form':form})
+            messages.error(request,f'Correct the issues!')
+            return render(request, 'car_rental/add_car.html', {'form': form})
     else:
         form = CarForm()
-        return redirect(request, 'car_rental/add_car.html', {'form': form})
+        return render(request, 'car_rental/add_car.html', {'form': form})
