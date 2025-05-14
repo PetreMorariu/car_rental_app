@@ -40,13 +40,21 @@ def edit_car(request, car_id: int):
     return render(request,'car_rental/edit_car.html', {'form':form, 'car':car})
 
 
-def delete_car(request, car_id):
+def delete_car(request, car_id:int):
     car = get_object_or_404(Car, id=car_id)
     if request.method == 'POST':
         car.delete()
         messages.warning(request, f'The car was deleted!')
         return redirect("car_rental-home")
     return render(request, 'car_rental/confirm_delete.html', {'car': car})
+
+def customer_delete_view(request, cust_id:int):
+    customer = get_object_or_404(Customers,id=cust_id)
+    if request.method == 'POST':
+        customer.delete()
+        messages.warning(request,f'The customer was deleted!')
+        return redirect('customers')
+    return render(request,'car_rental/customers_confirm_delete.html',{'customer':customer})
 
 
 def customer_view(request):
