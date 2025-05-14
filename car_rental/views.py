@@ -7,6 +7,11 @@ def home(request):
     cars = Car.objects.all()
     return render(request, 'car_rental/home.html',{'cars':cars})
 
+def detail_view_car(request, car_id:int):
+    car = get_object_or_404(Car, id=car_id)
+    return render(request,'car_rental/detail_view_car.html',{'car':car})
+
+
 def add_car(request):
     if request.method == 'POST':
         form = CarForm(request.POST)

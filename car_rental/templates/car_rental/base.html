@@ -18,18 +18,21 @@
                 <li class="nav-item active">
                     <a class="nav-link" href="{% url 'car_rental-home' %}">Home <span class="sr-only">(current)</span></a>
                 </li>
-                 <li class="nav-item active">
-                    <a class="nav-link" href="{% url 'add_car' %}">Add New Car <span class="sr-only">(current)</span></a>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Car
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="{% url 'add_car' %}">Add a new Car</a>
+                    </div>
                 </li>
             </ul>
             {% if user.is_authenticated %}
-              <form method="POST" action="{% url 'logout' %}" class="form-inline my-2 my-lg-0">
+                <form method="POST" action="{% url 'logout' %}" class="form-inline my-2 my-lg-0">
                     {% csrf_token %}
-                    <button class="btn btn-link my-2 my-sm-0 margin-top: -2mm" style="color: lightgray; text-decoration: none;"
-                           type="submit">Logout</button>
+                    <button class="btn btn-link my-2 my-sm-0 margin-top: -2mm" style="color: lightgray; text-decoration: none;" type="submit">Logout</button>
                     <a class="nav-link" href="#">{{ user }}</a>
-
-              </form>
+                </form>
             {% else %}
                 <ul class="navbar-nav ml-auto">
                     <li class="nav-item">
@@ -42,14 +45,14 @@
             {% endif %}
         </div>
     </nav>
-     <!-- handeling the flashed messages in the template -->
-                {% if messages %}
-                    {% for message in messages %}
-                        <div class="alert alert-{{ message.tags }}">
-                            {{ message }}
-                        </div>
-                    {% endfor %}
-                {% endif %}
+    <!-- Handling the flashed messages in the template -->
+    {% if messages %}
+        {% for message in messages %}
+            <div class="alert alert-{{ message.tags }}">
+                {{ message }}
+            </div>
+        {% endfor %}
+    {% endif %}
     {% block content %}{% endblock %}
     <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>

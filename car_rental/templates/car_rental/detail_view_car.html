@@ -42,15 +42,25 @@
 </head>
 <body>
     <div class="cars-container">
-        {% for car in cars %}
             <div class="car">
-                <h2>{{ car.make }} {{ car.model }} ({{ car.year }})</h2>
+                <a class="mr-2" style="font-weight: bold">Make:</a>
+                <p class="article-content">{{ car.make }}</p>
+                <a class="mr-2" style="font-weight: bold">Model:</a>
+                <p class="article-content">{{ car.model }}</p>
+                <a class="mr-2" style="font-weight: bold">Year:</a>
+                <p class="article-content">{{ car.year }}</p>
+                <a class="mr-2" style="font-weight: bold">Rental price/day:</a>
+                <p class="article-content">{{ car.rental_price }}</p>
+                <a class="mr-2" style="font-weight: bold">Location:</a>
+                <p class="article-content">{{ car.location }}</p>
+                <a class="mr-2" style="font-weight: bold">Availability:</a>
+                <p class="article-content">{{ car.is_available }}</p>
                 <ul class="attributes">
                     <li><strong>Location:</strong> {{ car.location }}</li>
                 </ul>
-                <a class="nav-link" href="{% url 'detail_view_car' car.id %}">Details<span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'edit_car' car.id %}">Edit Car <span class="sr-only">(current)</span></a>
+                <a class="nav-link" href="{% url 'delete_car' car.id %}">Delete Car <span class="sr-only">(current)</span></a>
             </div>
-        {% endfor %}
     </div>
 </body>
 </html>
