@@ -25,6 +25,14 @@
                         <a class="dropdown-item" href="{% url 'add_car' %}">Add a new Car</a>
                     </div>
                 </li>
+                <li class="nav-item dropdown">
+                    <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                        Customers
+                    </a>
+                    <div class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <a class="dropdown-item" href="#">Add a new Customer</a>
+                    </div>
+                </li>
             </ul>
             {% if user.is_authenticated %}
                 <form method="POST" action="{% url 'logout' %}" class="form-inline my-2 my-lg-0">
