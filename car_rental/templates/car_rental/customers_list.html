@@ -1,0 +1,58 @@
+{% extends "car_rental/base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <title>Car Listings</title>
+    <style>
+        /* Container that holds all cars, with flex layout */
+        .cars-container {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 20px; /* space between cars */
+            justify-content: center; /* optional: centers the row */
+        }
+        /* Each car block takes roughly half the width minus gaps */
+        .car {
+            flex: 1 1 calc(50% - 20px);
+            border: 1px solid #ccc;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 2px 2px 6px rgba(0,0,0,0.1);
+            box-sizing: border-box;
+        }
+        /* Optional: make cars look consistent on smaller screens */
+        @media(max-width: 768px) {
+            .car {
+                flex: 1 1 100%;
+            }
+        }
+
+        h2 {
+            margin-top: 0;
+        }
+        .attributes {
+            list-style: none;
+            padding: 0;
+        }
+        .attributes li {
+            padding: 4px 0;
+        }
+    </style>
+</head>
+<body>
+    <div class="cars-container">
+        {% for customer in customers %}
+            <div class="Customers">
+                <a class="mr-2" style="font-weight: bold">Name:</a>
+                <p class="article-content">{{ customer.name }}</p>
+                <a class="mr-2" style="font-weight: bold">Email:</a>
+                <p class="article-content">{{ customer.email }}</p>
+                <a class="mr-2" style="font-weight: bold">Phone number:</a>
+                <p class="article-content">{{ customer.phone_number }}</p>
+            </div>
+        {% endfor %}
+    </div>
+</body>
+</html>
+{% endblock %}
