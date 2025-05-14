@@ -27,6 +27,8 @@
                     {% csrf_token %}
                     <button class="btn btn-link my-2 my-sm-0 margin-top: -2mm" style="color: lightgray; text-decoration: none;"
                            type="submit">Logout</button>
+                    <a class="nav-link" href="#">{{ user }}</a>
+
               </form>
             {% else %}
                 <ul class="navbar-nav ml-auto">
