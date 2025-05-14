@@ -41,18 +41,10 @@
     </style>
 </head>
 <body>
-    <div class="cars-container">
+        <h1>Customers List</h1>
         {% for customer in customers %}
-            <div class="Customers">
-                <a class="mr-2" style="font-weight: bold">Name:</a>
-                <p class="article-content">{{ customer.name }}</p>
-                <a class="mr-2" style="font-weight: bold">Email:</a>
-                <p class="article-content">{{ customer.email }}</p>
-                <a class="mr-2" style="font-weight: bold">Phone number:</a>
-                <p class="article-content">{{ customer.phone_number }}</p>
-            </div>
+           <h4>{{ customer.name }}</h4>
         {% endfor %}
-    </div>
 </body>
 </html>
 {% endblock %}
