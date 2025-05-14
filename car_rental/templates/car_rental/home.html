@@ -45,6 +45,7 @@
         {% for car in cars %}
             <div class="car">
                 <h2>{{ car.make }} {{ car.model }} ({{ car.year }})</h2>
+                <h4>{{ car.car_type }}</h4>
                 <ul class="attributes">
                     <li><strong>Location:</strong> {{ car.location }}</li>
                 </ul>
