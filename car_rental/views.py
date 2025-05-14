@@ -39,6 +39,7 @@ def edit_car(request, car_id: int):
         form = CarForm(instance=car)
     return render(request,'car_rental/edit_car.html', {'form':form, 'car':car})
 
+
 def delete_car(request, car_id):
     car = get_object_or_404(Car, id=car_id)
     if request.method == 'POST':
@@ -70,6 +71,19 @@ def customer_detail_view(request,cust_id:int):
     customer = get_object_or_404(Customers,id=cust_id)
     return render(request,'car_rental/customers_detail_view.html',{'customer':customer})
 
+
+def customer_edit_view(request, cust_id: int):
+    customer = get_object_or_404(Customers, id=cust_id)
+
+    if request.method == 'POST':
+        form = CustomerForm(request.POST, instance=customer)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'The customer was updated!')
+            return redirect('customers')
+    else:
+        form = CustomerForm(instance=customer)
+    return render(request, 'car_rental/customer_edit.html', {'form': form, 'customer': customer})
 
 
 
