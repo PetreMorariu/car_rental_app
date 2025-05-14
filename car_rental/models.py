@@ -1,5 +1,5 @@
 from django.db import models
-from django.contrib.auth.models import User
+
 
 class Car(models.Model):
     VEHICLE_TYPES = [
@@ -18,3 +18,11 @@ class Car(models.Model):
 
     def __str__(self):
         return f"{self.make} {self.model}"
+
+class Customers(models.Model):
+    name = models.CharField(max_length=100)
+    email = models.EmailField(unique=True)
+    phone_number=models.CharField(max_length=20)
+
+    def __str__(self):
+        return self.name
