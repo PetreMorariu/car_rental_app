@@ -49,7 +49,7 @@ def delete_car(request, car_id):
 
 
 def customer_view(request):
-    customers = Customers.objects.all()
+    customers = (Customers.objects.all().order_by('name'))
     return render(request,'car_rental/customers_list.html',{'customers':customers})
 
 def customer_add_view(request):
@@ -65,6 +65,11 @@ def customer_add_view(request):
     else:
         form = CustomerForm()
         return render(request,'car_rental/customers_add.html',{'form':form})
+
+def customer_detail_view(request,cust_id:int):
+    customer = get_object_or_404(Customers,id=cust_id)
+    return render(request,'car_rental/customers_detail_view.html',{'customer':customer})
+
 
 
 
