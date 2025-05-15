@@ -1,0 +1,144 @@
+{
+  "clients": [
+    {
+      "name": "John Doe",
+      "email": "john.doe@example.com",
+      "phone_number": "+1 123-456-7890"
+    },
+    {
+      "name": "Jane Smith",
+      "email": "jane.smith@example.com",
+      "phone_number": "+1 987-654-3210"
+    },
+    {
+      "name": "Bob Johnson",
+      "email": "bob.johnson@example.com",
+      "phone_number": "+1 555-123-4567"
+    },
+    {
+      "name": "Alice Brown",
+      "email": "alice.brown@example.com",
+      "phone_number": "+1 901-234-5678"
+    },
+    {
+      "name": "Mike Davis",
+      "email": "mike.davis@example.com",
+      "phone_number": "+1 111-222-3333"
+    },
+    {
+      "name": "Emily Chen",
+      "email": "emily.chen@example.com",
+      "phone_number": "+1 444-555-6666"
+    },
+    {
+      "name": "David Lee",
+      "email": "david.lee@example.com",
+      "phone_number": "+1 777-888-9999"
+    },
+    {
+      "name": "Sarah Taylor",
+      "email": "sarah.taylor@example.com",
+      "phone_number": "+1 123-456-0000"
+    },
+    {
+      "name": "Kevin White",
+      "email": "kevin.white@example.com",
+      "phone_number": "+1 987-654-0001"
+    },
+    {
+      "name": "Olivia Martin",
+      "email": "olivia.martin@example.com",
+      "phone_number": "+1 555-123-0002"
+    },
+    {
+      "name": "William Harris",
+      "email": "william.harris@example.com",
+      "phone_number": "+1 901-234-0003"
+    },
+    {
+      "name": "Ava Thompson",
+      "email": "ava.thompson@example.com",
+      "phone_number": "+1 111-222-0004"
+    },
+    {
+      "name": "Ethan Patel",
+      "email": "ethan.patel@example.com",
+      "phone_number": "+1 444-555-0005"
+    },
+    {
+      "name": "Isabella Garcia",
+      "email": "isabella.garcia@example.com",
+      "phone_number": "+1 777-888-0006"
+    },
+    {
+      "name": "Liam Brooks",
+      "email": "liam.brooks@example.com",
+      "phone_number": "+1 123-456-0007"
+    },
+    {
+      "name": "Mia Russell",
+      "email": "mia.russell@example.com",
+      "phone_number": "+1 987-654-0008"
+    },
+    {
+      "name": "Noah Sanchez",
+      "email": "noah.sanchez@example.com",
+      "phone_number": "+1 555-123-0009"
+    },
+    {
+      "name": "Charlotte Rodriguez",
+      "email": "charlotte.rodriguez@example.com",
+      "phone_number": "+1 901-234-0010"
+    },
+    {
+      "name": "Abigail Jenkins",
+      "email": "abigail.jenkins@example.com",
+      "phone_number": "+1 111-222-0011"
+    },
+    {
+      "name": "Elijah Walker",
+      "email": "elijah.walker@example.com",
+      "phone_number": "+1 444-555-0012"
+    },
+    {
+      "name": "Harper Lewis",
+      "email": "harper.lewis@example.com",
+      "phone_number": "+1 777-888-0013"
+    },
+    {
+      "name": "Alexander Scott",
+      "email": "alexander.scott@example.com",
+      "phone_number": "+1 123-456-0014"
+    },
+    {
+      "name": "Sophia Foster",
+      "email": "sophia.foster@example.com",
+      "phone_number": "+1 987-654-0015"
+    },
+    {
+      "name": "Benjamin Mitchell",
+      "email": "benjamin.mitchell@example.com",
+      "phone_number": "+1 555-123-0016"
+    },
+    {
+      "name": "Emma Nelson",
+      "email": "emma.nelson@example.com",
+      "phone_number": "+1 901-234-0017"
+    },
+    {
+      "name": "Logan Price",
+      "email": "logan.price@example.com",
+      "phone_number": "+1 111-222-0018"
+    },
+    {
+      "name": "Aria Hall",
+      "email": "aria.hall@example.com",
+      "phone_number": "+1 444-555-0019"
+    },
+    {
+      "name": "Caleb Kim",
+      "email": "caleb.kim@example.com",
+      "phone_number": "+1 777-888-0020"
+    }
+  ]
+}

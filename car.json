@@ -1,0 +1,256 @@
+{
+  "cars": [
+    {
+      "make": "Toyota",
+      "model": "Corolla",
+      "car_type": "sedan",
+      "year": 2015,
+      "rental_price": 40,
+      "location": "New York",
+      "is_available": true
+    },
+    {
+      "make": "Honda",
+      "model": "CR-V",
+      "car_type": "suv",
+      "year": 2018,
+      "rental_price": 50,
+      "location": "Los Angeles",
+      "is_available": true
+    },
+    {
+      "make": "Ford",
+      "model": "F-150",
+      "car_type": "truck",
+      "year": 2020,
+      "rental_price": 60,
+      "location": "Chicago",
+      "is_available": false
+    },
+    {
+      "make": "Tesla",
+      "model": "Model 3",
+      "car_type": "sedan",
+      "year": 2021,
+      "rental_price": 55,
+      "location": "Houston",
+      "is_available": true
+    },
+    {
+      "make": "Subaru",
+      "model": "Outback",
+      "car_type": "suv",
+      "year": 2017,
+      "rental_price": 45,
+      "location": "Phoenix",
+      "is_available": true
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Silverado",
+      "car_type": "truck",
+      "year": 2019,
+      "rental_price": 58,
+      "location": "Philadelphia",
+      "is_available": true
+    },
+    {
+      "make": "Nissan",
+      "model": "Altima",
+      "car_type": "sedan",
+      "year": 2016,
+      "rental_price": 42,
+      "location": "San Antonio",
+      "is_available": false
+    },
+    {
+      "make": "Jeep",
+      "model": "Grand Cherokee",
+      "car_type": "suv",
+      "year": 2014,
+      "rental_price": 40,
+      "location": "San Diego",
+      "is_available": true
+    },
+    {
+      "make": "Kia",
+      "model": "Optima",
+      "car_type": "sedan",
+      "year": 2013,
+      "rental_price": 35,
+      "location": "Dallas",
+      "is_available": true
+    },
+    {
+      "make": "BMW",
+      "model": "3 Series",
+      "car_type": "sedan",
+      "year": 2012,
+      "rental_price": 50,
+      "location": "San Jose",
+      "is_available": true
+    },
+    {
+      "make": "Hyundai",
+      "model": "Elantra",
+      "car_type": "sedan",
+      "year": 2011,
+      "rental_price": 38,
+      "location": "Austin",
+      "is_available": false
+    },
+    {
+      "make": "Mazda",
+      "model": "CX-5",
+      "car_type": "suv",
+      "year": 2016,
+      "rental_price": 48,
+      "location": "Jacksonville",
+      "is_available": true
+    },
+    {
+      "make": "Volkswagen",
+      "model": "Golf",
+      "car_type": "sedan",
+      "year": 2015,
+      "rental_price": 40,
+      "location": "San Francisco",
+      "is_available": true
+    },
+    {
+      "make": "Audi",
+      "model": "A4",
+      "car_type": "sedan",
+      "year": 2017,
+      "rental_price": 52,
+      "location": "Indianapolis",
+      "is_available": true
+    },
+    {
+      "make": "Mercedes-Benz",
+      "model": "C-Class",
+      "car_type": "sedan",
+      "year": 2018,
+      "rental_price": 60,
+      "location": "Columbus",
+      "is_available": false
+    },
+    {
+      "make": "Lexus",
+      "model": "RX",
+      "car_type": "suv",
+      "year": 2019,
+      "rental_price": 65,
+      "location": "Fort Worth",
+      "is_available": true
+    },
+    {
+      "make": "Land Rover",
+      "model": "Range Rover",
+      "car_type": "suv",
+      "year": 2020,
+      "rental_price": 70,
+      "location": "Charlotte",
+      "is_available": true
+    },
+    {
+      "make": "Porsche",
+      "model": "Macan",
+      "car_type": "suv",
+      "year": 2019,
+      "rental_price": 68,
+      "location": "Memphis",
+      "is_available": false
+    },
+    {
+      "make": "Fiat",
+      "model": "500",
+      "car_type": "sedan",
+      "year": 2014,
+      "rental_price": 36,
+      "location": "Boston",
+      "is_available": true
+    },
+    {
+      "make": "Mitsubishi",
+      "model": "Outlander",
+      "car_type": "suv",
+      "year": 2015,
+      "rental_price": 41,
+      "location": "Baltimore",
+      "is_available": true
+    },
+    {
+      "make": "Nissan",
+      "model": "Rogue",
+      "car_type": "suv",
+      "year": 2017,
+      "rental_price": 46,
+      "location": "Detroit",
+      "is_available": true
+    },
+    {
+      "make": "Ford",
+      "model": "Escape",
+      "car_type": "suv",
+      "year": 2013,
+      "rental_price": 39,
+      "location": "El Paso",
+      "is_available": true
+    },
+    {
+      "make": "Chevrolet",
+      "model": "Cruze",
+      "car_type": "sedan",
+      "year": 2012,
+      "rental_price": 37,
+      "location": "Milwaukee",
+      "is_available": false
+    },
+    {
+      "make": "Kia",
+      "model": "Sorento",
+      "car_type": "suv",
+      "year": 2018,
+      "rental_price": 54,
+      "location": "Seattle",
+      "is_available": true
+    },
+    {
+      "make": "Toyota",
+      "model": "Rav4",
+      "car_type": "suv",
+      "year": 2016,
+      "rental_price": 44,
+      "location": "Denver",
+      "is_available": true
+    },
+    {
+      "make": "Honda",
+      "model": "Civic",
+      "car_type": "sedan",
+      "year": 2019,
+      "rental_price": 49,
+      "location": "Washington",
+      "is_available": true
+    },
+    {
+      "make": "Ram",
+      "model": "1500",
+      "car_type": "truck",
+      "year": 2021,
+      "rental_price": 62,
+      "location": "Nashville",
+      "is_available": true
+    },
+    {
+      "make": "Infiniti",
+      "model": "Q50",
+      "car_type": "sedan",
+      "year": 2020,
+      "rental_price": 56,
+      "location": "Oklahoma City",
+      "is_available": true
+    }
+  ]
+}
