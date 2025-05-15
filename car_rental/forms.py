@@ -14,4 +14,4 @@ class CustomerForm(forms.ModelForm):
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['name','customer', 'car', 'booking_date','rental_duration']
+        fields = ['customer', 'car', 'booking_date','rental_duration']

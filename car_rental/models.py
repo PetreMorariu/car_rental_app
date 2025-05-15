@@ -30,7 +30,6 @@ class Customers(models.Model):
 
 
 class Booking(models.Model):
-    name = models.CharField(max_length=100)
     customer = models.ForeignKey(Customers, on_delete=models.CASCADE)
     car = models.ForeignKey(Car,on_delete=models.CASCADE)
     booking_date = models.DateField(default=timezone.now)
