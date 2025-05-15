@@ -1,0 +1,37 @@
+{% extends "car_rental/base.html" %}
+
+{% block content %}
+  <html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Customers List</title>
+    <style>
+      .customer-list {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+      }
+      .booking-list li {
+        padding: 10px;
+        border-bottom: 1px solid #ccc;
+      }
+      .booking-list li:last-child {
+        border-bottom: none;
+      }
+      .booking-list {
+      margin-left: 30px;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Bookings List</h1>
+    <ul class="booking-list">
+      {% for book in booking %}
+        <li>
+          <a href="#">{{ book.name }}</a>
+        </li>
+      {% endfor %}
+    </ul>
+  </body>
+  </html>
+{% endblock %}

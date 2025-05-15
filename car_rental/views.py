@@ -1,5 +1,5 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from .models import Car,Customers
+from .models import Car,Customers,Booking
 from .forms import CarForm,CustomerForm
 from django.contrib import messages
 
@@ -58,8 +58,10 @@ def customer_delete_view(request, cust_id:int):
 
 
 def customer_view(request):
-    customers = (Customers.objects.all().order_by('name'))
+    customers = Customers.objects.all().order_by('name')
     return render(request,'car_rental/customers_list.html',{'customers':customers})
+
+
 
 def customer_add_view(request):
     if request.method == 'POST':
@@ -93,7 +95,9 @@ def customer_edit_view(request, cust_id: int):
         form = CustomerForm(instance=customer)
     return render(request, 'car_rental/customer_edit.html', {'form': form, 'customer': customer})
 
-
+def booking_view(request):
+    book = Booking.objects.all().order_by('customer')
+    return render(request,'car_rental/bookings_list.html',{'book':book})
 
 
 
