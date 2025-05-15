@@ -26,3 +26,13 @@ class Customers(models.Model):
 
     def __str__(self):
         return self.name
+
+
+class Booking(models.Model):
+    customer = models.ForeignKey(Customers, on_delete=models.CASCADE)
+    car = models.ForeignKey(Car,on_delete=models.CASCADE)
+    booking_date = models.DateField()
+    rental_duration = models.IntegerField() #in days
+
+    def __str__(self):
+        return f'Booking {self.id} for {self.customer.name}'
