@@ -1,6 +1,8 @@
 from django.shortcuts import render, redirect, get_object_or_404
+from django.template.context_processors import request
+
 from .models import Car,Customers,Booking
-from .forms import CarForm,CustomerForm
+from .forms import CarForm,CustomerForm,BookingForm
 from django.contrib import messages
 
 def home(request):
@@ -98,6 +100,19 @@ def customer_edit_view(request, cust_id: int):
 def booking_view(request):
     book = Booking.objects.all().order_by('customer')
     return render(request,'car_rental/bookings_list.html',{'book':book})
+
+def bookings_add_view(request):
+    if request.method == 'POST':
+        form = BookingForm(request.POST)
+        if form.is_valid():
+            form.save()
+            messages.success(request,f'The booking was done successfully')
+            return redirect('bookings')
+        else:
+            return render(request,'car_rental/bookings_add.html',{'form':form})
+    else:
+        form = BookingForm()
+        return render(request,'car_rental/bookings_add.html',{'form':form})
 
 
 
