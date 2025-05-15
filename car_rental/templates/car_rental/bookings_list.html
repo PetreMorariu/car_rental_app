@@ -26,9 +26,9 @@
   <body>
     <h1>Bookings List</h1>
     <ul class="booking-list">
-      {% for book in booking %}
+      {% for b in book %}
         <li>
-          <a href="#">{{ book.name }}</a>
+          <a href="#"> Booking for {{ b.customer }}</a>
         </li>
       {% endfor %}
     </ul>
