@@ -1,5 +1,4 @@
 from django.shortcuts import render, redirect, get_object_or_404
-from django.template.context_processors import request
 
 from .models import Car,Customers,Booking
 from .forms import CarForm,CustomerForm,BookingForm
@@ -12,7 +11,6 @@ def home(request):
 def detail_view_car(request, car_id:int):
     car = get_object_or_404(Car, id=car_id)
     return render(request,'car_rental/detail_view_car.html',{'car':car})
-
 
 def add_car(request):
     if request.method == 'POST':
@@ -62,8 +60,6 @@ def customer_delete_view(request, cust_id:int):
 def customer_view(request):
     customers = Customers.objects.all().order_by('name')
     return render(request,'car_rental/customers_list.html',{'customers':customers})
-
-
 
 def customer_add_view(request):
     if request.method == 'POST':

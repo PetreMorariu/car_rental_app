@@ -11,7 +11,16 @@ class CustomerForm(forms.ModelForm):
         model = Customers
         fields = ['name', 'email', 'phone_number']
 
+# class BookingForm(forms.ModelForm):
+#     class Meta:
+#         model = Booking
+#         fields = ['customer', 'car', 'booking_date','rental_duration']
+
 class BookingForm(forms.ModelForm):
     class Meta:
         model = Booking
-        fields = ['customer', 'car', 'booking_date','rental_duration']
+        fields = ['customer', 'car', 'booking_date', 'rental_duration']
+
+    def __init__(self, *args, **kwargs):
+        super().__init__(*args, **kwargs)
+        self.fields['car'].queryset = Car.objects.filter(is_available=True)
