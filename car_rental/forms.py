@@ -23,4 +23,13 @@ class BookingForm(forms.ModelForm):
 
     def __init__(self, *args, **kwargs):
         super().__init__(*args, **kwargs)
-        self.fields['car'].queryset = Car.objects.filter(is_available=True)
+        if self.instance and self.instance.pk:
+            # Editing existing booking
+            current_car = self.instance.car
+            # Combine available cars with the current car
+            available_cars_qs = Car.objects.filter(is_available=True)
+            # Use `|` (union) to include current car if it's not in available_cars_qs
+            self.fields['car'].queryset = (available_cars_qs | Car.objects.filter(pk=current_car.pk))
+        else:
+            # Creating new booking, only show available cars
+            self.fields['car'].queryset = Car.objects.filter(is_available=True)
