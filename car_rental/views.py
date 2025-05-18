@@ -124,7 +124,13 @@ def booking_edit_view(request, book_id: int):
         form = BookingForm(instance=booking)
     return render(request, 'car_rental/booking_edit.html', {'form': form})
 
-
+def booking_delete_view(request, book_id:int):
+    booking = get_object_or_404(Booking,id=book_id)
+    if request.method == 'POST':
+        booking.delete()
+        messages.warning(request,f'The booking was deleted!')
+        return redirect('bookings')
+    return render(request,'car_rental/bookings_confirm_delete.html',{'booking':booking})
 
 
 
