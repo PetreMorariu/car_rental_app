@@ -37,7 +37,7 @@ def edit_car(request, car_id: int):
         if form.is_valid():
             form.save()
             messages.success(request,f'Your car was updated!')
-            return redirect('car_rental-home')
+            return redirect('cars')
     else:
         form = CarForm(instance=car)
     return render(request,'car_rental/car_edit.html', {'form':form, 'car':car})

@@ -1,4 +1,4 @@
-from django.db.models.signals import pre_save, post_save
+from django.db.models.signals import pre_save, post_save,post_delete
 from django.dispatch import receiver
 from django.db import transaction
 from .models import Booking, Car
@@ -38,3 +38,11 @@ def update_car_availability(sender, instance, created, **kwargs):
                 if new_car.is_available:
                     new_car.is_available = False
                     new_car.save()
+
+
+@receiver(post_delete, sender=Booking)
+def free_car_on_delete(sender, instance, **kwargs):
+    car = instance.car
+    if not car.is_available:
+        car.is_available = True
+        car.save()
