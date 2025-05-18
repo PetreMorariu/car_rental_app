@@ -132,6 +132,11 @@ def booking_delete_view(request, book_id:int):
         return redirect('bookings')
     return render(request,'car_rental/bookings_confirm_delete.html',{'booking':booking})
 
+def booking_detail_view(request,book_id:int):
+    booking = get_object_or_404(Booking,id=book_id)
+    total_price = booking.car.rental_price * booking.rental_duration
+    return render(request,'car_rental/bookings_detail_view.html',{'booking':booking,'total_price':total_price})
+
 
 
 

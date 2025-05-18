@@ -1,0 +1,32 @@
+{% extends "car_rental/base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Detail view:</title>
+  <style>
+    .customers-container {
+      margin-left: 30px;
+    }
+  </style>
+</head>
+<body>
+  <div class="customers-container">
+    <div class="customer">
+      <a class="mr-2" style="font-weight: bold">Customer:</a>
+      <p class="article-content">{{ booking.customer }}</p>
+      <a class="mr-2" style="font-weight: bold">Car rented::</a>
+      <p class="article-content">{{ booking.car }}</p>
+      <a class="mr-2" style="font-weight: bold">Booking date:</a>
+      <p class="article-content">{{ booking.booking_date }}</p>
+      <a class="mr-2" style="font-weight: bold">Rental duration:</a>
+      <p class="article-content">{{ booking.rental_duration }}</p>
+      <a class="mr-2" style="font-weight: bold">Total cost for the customer:</a>
+      <p class="article-content">{{ total_price }}</p>
+      <a class="nav-link" href="{% url 'edit_bookings' booking.id %}">Edit Booking <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="{% url 'delete_bookings' booking.id %}">Delete Booking <span class="sr-only">(current)</span></a>
+    </div>
+  </div>
+</body>
+</html>
+{% endblock %}

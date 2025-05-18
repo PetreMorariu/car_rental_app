@@ -28,7 +28,7 @@
     <ul class="booking-list">
       {% for b in book %}
         <li>
-          <a href="{% url 'edit_bookings' b.id %}"> Booking for {{ b.customer }}</a>
+          <a href="{% url 'detail_view_booking' b.id %}"> Booking for {{ b.customer }}</a>
         </li>
       {% endfor %}
     </ul>
