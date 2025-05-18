@@ -111,6 +111,20 @@ def bookings_add_view(request):
         return render(request,'car_rental/bookings_add.html',{'form':form})
 
 
+def booking_edit_view(request, book_id: int):
+    booking = get_object_or_404(Booking, id=book_id)
+
+    if request.method == 'POST':
+        form = BookingForm(request.POST, instance=booking)
+        if form.is_valid():
+            form.save()
+            messages.success(request, f'Booking updated!')
+            return redirect('bookings')
+    else:
+        form = BookingForm(instance=booking)
+    return render(request, 'car_rental/booking_edit.html', {'form': form})
+
+
 
 
 
