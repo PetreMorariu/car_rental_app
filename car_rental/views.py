@@ -5,12 +5,15 @@ from .forms import CarForm,CustomerForm,BookingForm
 from django.contrib import messages
 
 def home(request):
+    return render(request,'car_rental/home.html')
+
+def car_view(request):
     cars = Car.objects.all()
-    return render(request, 'car_rental/home.html',{'cars':cars})
+    return render(request, 'car_rental/car_list.html',{'cars':cars})
 
 def detail_view_car(request, car_id:int):
     car = get_object_or_404(Car, id=car_id)
-    return render(request,'car_rental/detail_view_car.html',{'car':car})
+    return render(request,'car_rental/car_detail_view.html',{'car':car})
 
 def add_car(request):
     if request.method == 'POST':
@@ -21,10 +24,10 @@ def add_car(request):
             return redirect('car_rental-home')
         else:
             messages.error(request,f'Correct the issues!')
-            return render(request, 'car_rental/add_car.html', {'form': form})
+            return render(request, 'car_rental/car_add.html', {'form': form})
     else:
         form = CarForm()
-        return render(request, 'car_rental/add_car.html', {'form': form})
+        return render(request, 'car_rental/car_add.html', {'form': form})
 
 def edit_car(request, car_id: int):
     car = get_object_or_404(Car,id=car_id)
@@ -37,7 +40,7 @@ def edit_car(request, car_id: int):
             return redirect('car_rental-home')
     else:
         form = CarForm(instance=car)
-    return render(request,'car_rental/edit_car.html', {'form':form, 'car':car})
+    return render(request,'car_rental/car_edit.html', {'form':form, 'car':car})
 
 
 def delete_car(request, car_id:int):
