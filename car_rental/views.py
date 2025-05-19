@@ -17,7 +17,7 @@ def detail_view_car(request, car_id:int):
 
 def add_car(request):
     if request.method == 'POST':
-        form = CarForm(request.POST)
+        form = CarForm(request.POST,request.FILES)
         if form.is_valid():
             form.save()
             messages.success(request, f'The car was added to the Fleet!')
@@ -33,7 +33,7 @@ def edit_car(request, car_id: int):
     car = get_object_or_404(Car,id=car_id)
 
     if request.method == 'POST':
-        form = CarForm(request.POST,instance=car)
+        form = CarForm(request.POST,request.FILES, instance=car)
         if form.is_valid():
             form.save()
             messages.success(request,f'Your car was updated!')

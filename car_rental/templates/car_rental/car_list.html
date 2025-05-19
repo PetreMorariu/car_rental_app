@@ -46,6 +46,7 @@
     <div class="cars-container">
         {% for car in cars %}
             <div class="car">
+                <img class="rounded-circle article-img" src="{{ car.image.url }}">
                 <h2>{{ car.make }} {{ car.model }} ({{ car.year }})</h2>
                 <h4>{{ car.car_type }}</h4>
                 {% if car.is_available %}

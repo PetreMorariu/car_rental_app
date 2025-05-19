@@ -16,6 +16,7 @@ class Car(models.Model):
     rental_price = models.IntegerField(max_length=5)
     location = models.CharField(max_length=100)
     is_available = models.BooleanField(default=True)
+    image = models.ImageField(default='default.jpg',upload_to='car_images')
 
     def __str__(self):
         return f"{self.make} {self.model}"
