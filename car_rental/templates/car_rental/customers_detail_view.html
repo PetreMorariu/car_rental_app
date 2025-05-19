@@ -21,6 +21,8 @@
       <p class="article-content">{{ customer.phone_number }}</p>
       <a class="nav-link" href="{% url 'edit_customers' customer.id %}">Edit Customer <span class="sr-only">(current)</span></a>
       <a class="nav-link" href="{% url 'delete_customers' customer.id %}">Delete Customer <span class="sr-only">(current)</span></a>
+      <a class="nav-link" href="{% url 'history_customers' customer.id %}">Customer booking history <span class="sr-only">(current)</span></a>
+
     </div>
   </div>
 </body>

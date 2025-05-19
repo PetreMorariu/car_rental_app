@@ -1,0 +1,29 @@
+{% extends "car_rental/base.html" %}
+{% block content %}
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <title>Booking history:</title>
+  <style>
+    .customers-container {
+      margin-left: 30px;
+    }
+  </style>
+</head>
+<body>
+<h2>{{customer}} Booking History</h2>
+{% if bookings %}
+    <ul>
+    {% for booking in bookings %}
+        <li>
+            Car: {{ booking.car.make }} {{ booking.car.model }} ({{ booking.car.year }})<br>
+            Booked on: {{ booking.booking_date }}
+        </li>
+    {% endfor %}
+    </ul>
+{% else %}
+    <p>You have no bookings yet.</p>
+{% endif %}
+</body>
+</html>
+{% endblock %}

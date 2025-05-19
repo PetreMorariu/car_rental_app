@@ -8,6 +8,7 @@ urlpatterns = [
     path('customers/<int:cust_id>/detail_view/',views.customer_detail_view,name='detail_view_customers'),
     path('customers/<int:cust_id>/edit/',views.customer_edit_view,name='edit_customers'),
     path('customers/<int:cust_id>/delete/',views.customer_delete_view,name='delete_customers'),
+    path('customers/<int:cust_id>/history/', views.booking_history_view, name='history_customers'),
     path('car/',views.car_view,name='cars'),
     path('car/add/',views.add_car,name='add_car'),
     path('car/<int:car_id>/edit/',views.edit_car,name='edit_car'),

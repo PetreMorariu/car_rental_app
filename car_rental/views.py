@@ -140,7 +140,11 @@ def booking_detail_view(request,book_id:int):
     total_price = booking.car.rental_price * booking.rental_duration
     return render(request,'car_rental/bookings_detail_view.html',{'booking':booking,'total_price':total_price})
 
-
+def booking_history_view(request, cust_id: int):
+    customer = get_object_or_404(Customers, id=cust_id)
+    # Filter bookings where the customer matches
+    bookings = Booking.objects.filter(customer=customer).order_by('-booking_date')
+    return render(request, 'car_rental/booking_history.html', {'bookings': bookings,'customer':customer})
 
 
 
