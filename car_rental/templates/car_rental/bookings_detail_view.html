@@ -15,14 +15,19 @@
     <div class="customer">
       <a class="mr-2" style="font-weight: bold">Customer:</a>
       <p class="article-content">{{ booking.customer }}</p>
-      <a class="mr-2" style="font-weight: bold">Car rented::</a>
+      <a class="mr-2" style="font-weight: bold">Car rented:</a>
       <p class="article-content">{{ booking.car }}</p>
       <a class="mr-2" style="font-weight: bold">Booking date:</a>
       <p class="article-content">{{ booking.booking_date }}</p>
-      <a class="mr-2" style="font-weight: bold">Rental duration:</a>
-      <p class="article-content">{{ booking.rental_duration }}</p>
+      {% if booking.rental_duration > 1 %}
+        <a class="mr-2" style="font-weight: bold">Rental duration:</a>
+        <p class="article-content">{{ booking.rental_duration }} days</p>
+      {% else %}
+        <a class="mr-2" style="font-weight: bold">Rental duration:</a>
+        <p class="article-content">{{ booking.rental_duration }} day</p>
+      {% endif%}
       <a class="mr-2" style="font-weight: bold">Total cost for the customer:</a>
-      <p class="article-content">{{ total_price }}</p>
+      <p class="article-content">{{ total_price }} RON</p>
       <a class="nav-link" href="{% url 'edit_bookings' booking.id %}">Edit Booking <span class="sr-only">(current)</span></a>
       <a class="nav-link" href="{% url 'delete_bookings' booking.id %}">Delete Booking <span class="sr-only">(current)</span></a>
     </div>

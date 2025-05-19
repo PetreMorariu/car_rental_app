@@ -10,11 +10,12 @@
             display: flex;
             flex-wrap: wrap;
             gap: 20px; /* space between cars */
-            justify-content: center; /* optional: centers the row */
+            justify-content: center; /* centers the row if space permits */
         }
-        /* Each car block takes roughly half the width minus gaps */
+        /* Each car block takes roughly one-third of the width minus gaps */
         .car {
-            flex: 1 1 calc(50% - 20px);
+            flex: 1 1 calc(33.333% - 20px);
+            max-width: calc(33.333% - 20px);
             border: 1px solid #ccc;
             padding: 15px;
             border-radius: 8px;
@@ -25,6 +26,7 @@
         @media(max-width: 768px) {
             .car {
                 flex: 1 1 100%;
+                max-width: 100%;
             }
         }
 
@@ -50,7 +52,7 @@
                     <h4>Available</h4>
                 {% else %}
                     <h4>Not available</h4>
-                {% endif%}
+                {% endif %}
                 <ul class="attributes">
                     <li><strong>Location:</strong> {{ car.location }}</li>
                 </ul>
