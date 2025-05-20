@@ -17,7 +17,8 @@
     {% for booking in bookings %}
         <li>
             Car: {{ booking.car.make }} {{ booking.car.model }} ({{ booking.car.year }})<br>
-            Booked on: {{ booking.booking_date }}
+            Booked on: {{ booking.booking_date }}<br>
+            Number of days: {{ booking.rental_duration }}
         </li>
     {% endfor %}
     </ul>
